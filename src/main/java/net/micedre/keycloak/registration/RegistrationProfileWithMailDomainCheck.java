@@ -71,7 +71,7 @@ public class RegistrationProfileWithMailDomainCheck extends RegistrationProfile 
       AuthenticatorConfigModel mailDomainConfig = context.getAuthenticatorConfig();
       String eventError = Errors.INVALID_REGISTRATION;
 
-      String[] domains = mailDomainConfig.getConfig().getOrDefault("validDomains","exemple.org").split("##");
+      String[] domains = mailDomainConfig.getConfig().getOrDefault("validDomains","example.org").split("##");
       for (String domain : domains) {
          if (email.endsWith(domain)) {
             emailDomainValid = true;
